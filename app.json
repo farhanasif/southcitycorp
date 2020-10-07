@@ -1,0 +1,12 @@
+{
+  "name": "southcitycorp",
+  "displayName": "southcitycorp",
+  "expo": {
+    "name": "southcitycorp",
+    "slug": "southcitycorp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
