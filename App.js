@@ -24,38 +24,41 @@ function Root() {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
+          let iconSize;
 
           if (route.name === 'Home') {
-            iconName = focused
-              ? 'ios-home'
-              : 'ios-home';
+            iconName = focused ? 'ios-home' : 'ios-home';
+            iconSize = focused ? 32 : 24;
           } else if (route.name === 'Profile') {
             iconName = focused ? 'ios-person' : 'ios-person';
-          }else if (route.name === 'Live') {
-            iconName = focused ? 'ios-videocam' : 'ios-videocam';
+            iconSize = focused ? 32 : 24;
+          }else if (route.name === 'Query') {
+            iconName = focused ? 'ios-list-box' : 'ios-list-box';
+            iconSize = focused ? 32 : 24;
           }else if (route.name === 'Inbox') {
             iconName = focused ? 'ios-chatbubbles' : 'ios-chatbubbles';
+            iconSize = focused ? 32 : 24;
           }
 
           // You can return any component that you like here!
-          return <Ionicons name={iconName} size={28} color={color} />;
+          return <Ionicons name={iconName} size={iconSize} color={color} />;
         },
       })}
       tabBarOptions={{
         activeTintColor: 'white',
-        inactiveTintColor: '#F7F7F7',
-        showLabel: false,
+        inactiveTintColor: '#f6ffad',
         style: {
           backgroundColor: '#609513',
-          height: 70,
-         
+          height: 55,
+          paddingBottom: 2
         },
+        
       }}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Profile" component={DetailScreen} />
-      <Tab.Screen name="Live" component={DetailScreen} />
-      <Tab.Screen name="Inbox" component={DetailScreen} />
+      <Tab.Screen name="Home" component={HomeScreen}  options={{tabBarLabel: 'হোম'}}/>
+      <Tab.Screen name="Query" component={DetailScreen} options={{tabBarLabel: 'অভিযোগ'}}/>
+      <Tab.Screen name="Profile" component={DetailScreen} options={{tabBarLabel: 'একাউন্ট'}}/>
+      <Tab.Screen name="Inbox" component={DetailScreen} options={{tabBarLabel: 'হেল্প'}}/>
     </Tab.Navigator>
   )
 }

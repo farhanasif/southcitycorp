@@ -13,18 +13,18 @@ const ForgotPassword = ({ navigation }) => {
         resizeMode="contain"
         style={styles.image}
       ></Image>
-      <Text style={{fontSize: 17, fontFamily: 'Roboto'}}>Forgot Password?</Text>
+      <Text style={{fontSize: 17, fontFamily: 'Roboto' , color: '#0F8943'}}>পাসওয়ার্ড ভুলে গেছেন?</Text>
       <View>
         <View style={styles.searchSection}>
-            <Entypo style={styles.searchIcon} name="mail" size={24} color="#000"/>
+            <Entypo style={styles.searchIcon} name="mail" size={24} color="#0F8943"/>
             <TextInput
                 style={styles.input}
-                placeholder="Email"
-                underlineColorAndroid="#1418C9"
+                placeholder="আপনার ইমেইল দিন"
+                underlineColorAndroid="#0F8943"
             />
         </View>
         <Button
-          title="Send me reset link"
+          title="রিসেট লিংক পাঠিয়ে দিন"
           icon={
             <FontAwesome
               name="sign-in"
@@ -33,12 +33,12 @@ const ForgotPassword = ({ navigation }) => {
               style={{marginRight: 10}}
             />
           }
-          buttonStyle={{marginTop: 20, backgroundColor:'#1418C9'}}
+          buttonStyle={{marginTop: 20, backgroundColor:'#0F8943'}}
         />
         <Button
-          title="back to Sign in"
+          title="লগইন করুন"
           type="clear"
-          titleStyle={{ color: '#1418C9'}}
+          titleStyle={{ color: '#0F8943'}}
           onPress={() => navigation.navigate('Signin')}
           buttonStyle={{minWidth:200}}
         />
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   searchIcon: {
       padding: 10,
-      color: '#1418C9',
+      color: '#0F8943',
   },
   input: {
       flex: 1,

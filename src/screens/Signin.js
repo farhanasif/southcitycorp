@@ -20,7 +20,7 @@ const Signin = ({ navigation }) => {
             <Entypo style={styles.searchIcon} name="mail" size={24} color="#000"/>
             <TextInput
                 style={styles.input}
-                placeholder="Email"
+                placeholder="ইমেইল"
                 underlineColorAndroid="#0F8943"
             />
         </View>
@@ -29,7 +29,7 @@ const Signin = ({ navigation }) => {
             <TextInput
                 style={styles.input}
                 secureTextEntry={true}
-                placeholder="Password"
+                placeholder="পাসওয়ার্ড"
                 underlineColorAndroid="#0F8943"
             />
         </View>
@@ -45,7 +45,7 @@ const Signin = ({ navigation }) => {
           placeholder='Password'
         /> */}
         <Button
-          title="Sign In"
+          title="সাইন ইন (Sign In)"
           icon={
             <FontAwesome
               name="sign-in"
@@ -58,7 +58,7 @@ const Signin = ({ navigation }) => {
           onPress={() => navigation.navigate('Root')}
         />
         <Button
-          title="Sign In with Gmail"
+          title="জিমেইল এর সাহায্যে সাইন ইন"
           icon={
             <MaterialCommunityIcons
               name="gmail"
@@ -82,13 +82,13 @@ const Signin = ({ navigation }) => {
           buttonStyle={{marginTop: 10, backgroundColor:'#4267B2'}}
         /> */}
         <Button
-          title="Dont have an account? Register here"
+          title="নতুন একাউন্ট করুন"
           type="clear"
           titleStyle={{ color: '#0F8943'}}
           onPress={() => navigation.navigate('SignUp')}
         />
         <Button
-          title="Forgot Password"
+          title="পাসওয়ার্ড ভুলে গেছেন"
           type="clear"
           titleStyle={{ color: '#0F8943'}}
           onPress={() => navigation.navigate('ForgotPassword')}
