@@ -9,6 +9,9 @@ import Splash from './src/screens/SplashScreen';
 import Signin from './src/screens/Signin';
 import SignUp from './src/screens/SignUp';
 import ForgotPassword from './src/screens/ForgotPassword';
+import Query from './src/screens/Query';
+import QueryDetailsScreen from './src/screens/QueryDetailsScreen';
+import OTPScreen from './src/screens/OTPScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -55,11 +58,21 @@ function Root() {
         
       }}
     >
-      <Tab.Screen name="Home" component={HomeScreen}  options={{tabBarLabel: 'হোম'}}/>
-      <Tab.Screen name="Query" component={DetailScreen} options={{tabBarLabel: 'অভিযোগ'}}/>
+      <Tab.Screen name="Home" component={Home}  options={{tabBarLabel: 'হোম'}}/>
+      <Tab.Screen name="Query" component={QueryDetailsScreen} options={{tabBarLabel: 'অভিযোগ'}}/>
       <Tab.Screen name="Profile" component={DetailScreen} options={{tabBarLabel: 'একাউন্ট'}}/>
       <Tab.Screen name="Inbox" component={DetailScreen} options={{tabBarLabel: 'হেল্প'}}/>
     </Tab.Navigator>
+  )
+}
+
+function Home({navigation}){
+  return (
+    <Stack.Navigator initialRouteName="HomeRoot">
+        <Stack.Screen name="HomeRoot" component={HomeScreen} options={{headerShown: false,}} />
+        <Stack.Screen name="QueryHome" component={Query} options={{headerShown: false,}}/>  
+        <Stack.Screen name="OTP" component={OTPScreen} options={{headerShown: false,}}/> 
+      </Stack.Navigator>
   )
 }
 

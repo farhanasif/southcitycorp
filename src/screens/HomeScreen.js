@@ -4,7 +4,7 @@ import ItemHeader from "../components/ItemHeader";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import QueryButton from "../components/QueryButton";
 
-function HomeScreen(props) {
+function HomeScreen({navigation, props }) {
   return (
     <View style={styles.container}>
       <View style={styles.itemHeaderStack}>
@@ -75,7 +75,7 @@ function HomeScreen(props) {
         ></MaterialCommunityIcons>
         <Text style={styles.publictoilet}>পাবলিক টয়লেট</Text>
       </View>
-      <QueryButton style={styles.queryButton}></QueryButton>
+      <QueryButton style={styles.queryButton} navigation={navigation}></QueryButton>
       <View style={styles.icon10Row}>
         <MaterialCommunityIcons
           name="school"

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 
-function QueryButton(props) {
+function QueryButton( props ) {
+  console.log(props)
   return (
     <View style={[styles.container, props.style]}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('QueryHome')}>
         <Text style={styles.loremIpsum5}>আপনার অভিযোগটি আমাদের জানান</Text>
       </TouchableOpacity>
     </View>
