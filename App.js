@@ -12,6 +12,7 @@ import ForgotPassword from './src/screens/ForgotPassword';
 import Query from './src/screens/Query';
 import QueryDetailsScreen from './src/screens/QueryDetailsScreen';
 import OTPScreen from './src/screens/OTPScreen';
+import QuerySuccessScreen from './src/screens/QuerySuccessScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -71,7 +72,8 @@ function Home({navigation}){
     <Stack.Navigator initialRouteName="HomeRoot">
         <Stack.Screen name="HomeRoot" component={HomeScreen} options={{headerShown: false,}} />
         <Stack.Screen name="QueryHome" component={Query} options={{headerShown: false,}}/>  
-        <Stack.Screen name="OTP" component={OTPScreen} options={{headerShown: false,}}/> 
+        <Stack.Screen name="OTP" component={OTPScreen} options={{headerShown: false,}}/>
+        <Stack.Screen name="Success" component={QuerySuccessScreen} options={{headerShown: false,}}/>
       </Stack.Navigator>
   )
 }

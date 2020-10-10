@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native";
 
 function QuerySubmitBtn(props) {
+    console.log(props)
   return (
     <View style={[styles.container, props.style]}>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.সাবমিটকরুন} onPress={() => props.navigation.navigate('OTP')}>সাবমিট করুন</Text>
+        <Text style={styles.সাবমিটকরুন} onPress={() => props.navigation.navigate('OTP')}>agfaisfksalj</Text>
       </TouchableOpacity>
     </View>
   );
