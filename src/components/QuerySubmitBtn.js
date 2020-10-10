@@ -6,7 +6,7 @@ function QuerySubmitBtn(props) {
   return (
     <View style={[styles.container, props.style]}>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.সাবমিটকরুন} onPress={() => props.navigation.navigate('OTP')}>agfaisfksalj</Text>
+        <Text style={styles.সাবমিটকরুন} onPress={() => props.navigation.navigate('OTP')}>সাবমিট করুন</Text>
       </TouchableOpacity>
     </View>
   );

@@ -2,17 +2,17 @@ import React, { Component } from "react";
 import { StyleSheet, View, TouchableOpacity, Text, Image } from "react-native";
 import { Feather, MaterialCommunityIcons } from "react-native-vector-icons";
 
-function QuerySuccessScreen(props) {
+function QuerySuccessScreen({navigation, props}) {
   return (
     <View style={styles.container}>
       <View style={styles.button1Stack}>
-        <TouchableOpacity style={styles.button1}>
+        <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('HomeRoot')}>
           <View style={styles.icon3Row}>
             <Feather name="arrow-left" style={styles.icon3}></Feather>
             <Text style={styles.হোমএযান}>হোম এ যান</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Query')}>
           <View style={styles.icon2Row}>
             <Feather name="arrow-right" style={styles.icon2}></Feather>
             <Text style={styles.বিস্তারিতদেখুন}>বিস্তারিত দেখুন</Text>

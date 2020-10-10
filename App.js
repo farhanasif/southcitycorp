@@ -13,6 +13,8 @@ import Query from './src/screens/Query';
 import QueryDetailsScreen from './src/screens/QueryDetailsScreen';
 import OTPScreen from './src/screens/OTPScreen';
 import QuerySuccessScreen from './src/screens/QuerySuccessScreen';
+import Account from './src/screens/Account';
+import Contact from './src/screens/Contact';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -61,8 +63,8 @@ function Root() {
     >
       <Tab.Screen name="Home" component={Home}  options={{tabBarLabel: 'হোম'}}/>
       <Tab.Screen name="Query" component={QueryDetailsScreen} options={{tabBarLabel: 'অভিযোগ'}}/>
-      <Tab.Screen name="Profile" component={DetailScreen} options={{tabBarLabel: 'একাউন্ট'}}/>
-      <Tab.Screen name="Inbox" component={DetailScreen} options={{tabBarLabel: 'হেল্প'}}/>
+      <Tab.Screen name="Profile" component={Account} options={{tabBarLabel: 'একাউন্ট'}}/>
+      <Tab.Screen name="Inbox" component={Contact} options={{tabBarLabel: 'হেল্প'}}/>
     </Tab.Navigator>
   )
 }

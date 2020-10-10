@@ -8,7 +8,7 @@ import {
   TouchableOpacity
 } from "react-native";
 
-function OtpScreen(props) {
+function OtpScreen({ navigation, props }) {
   return (
     <View style={styles.container}>
       <Image
@@ -16,13 +16,13 @@ function OtpScreen(props) {
         resizeMode="contain"
         style={styles.image}
       ></Image>
-      <Text style={styles.loremIpsum}>আপনার মোবাইল এ দেয়া ওটিপি লিখুন</Text>
+      <Text style={styles.loremIpsum}>আপনার মোবাইল এ পাঠানো ওটিপি লিখুন</Text>
       <TextInput
         placeholder=" 4 Digit OTP..."
         style={styles.placeholder}
       ></TextInput>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.অভিযোগটিসাবমিটকরুন}>অভিযোগটি সাবমিট করুন</Text>
+        <Text style={styles.অভিযোগটিসাবমিটকরুন} onPress={() => navigation.navigate('Success')}>অভিযোগটি সাবমিট করুন</Text>
       </TouchableOpacity>
     </View>
   );
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   loremIpsum: {
-    fontFamily: "roboto-700",
+    fontWeight: "700",
     color: "rgba(96,149,19,1)",
     marginTop: 60,
     alignSelf: "center"
