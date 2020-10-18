@@ -20,60 +20,60 @@ function HomeScreen({navigation, props }) {
           name="lightbulb"
           style={styles.icon}
         ></MaterialCommunityIcons>
-        <Text style={styles.loremIpsum}>রাস্তার বৈদ্যুতিক{"\n"}লাইট</Text>
+        <Text style={styles.loremIpsum}>STREET LIGHT</Text>
         <MaterialCommunityIcons
           name="account-multiple-plus-outline"
           style={styles.icon5}
         ></MaterialCommunityIcons>
-        <Text style={styles.dob}>জন্ম নিবন্ধন</Text>
+        <Text style={styles.dob}>BIRTH REGISTRATION</Text>
       </View>
       <View style={styles.icon1Row}>
         <MaterialCommunityIcons
           name="hospital-building"
           style={styles.icon1}
         ></MaterialCommunityIcons>
-        <Text style={styles.hospital}>হাসপাতাল</Text>
+        <Text style={styles.hospital}>HOSPITAL</Text>
         <MaterialCommunityIcons
           name="car"
           style={styles.icon6}
         ></MaterialCommunityIcons>
-        <Text style={styles.loremIpsum3}>রাস্তার গাড়ি পার্কিং</Text>
+        <Text style={styles.loremIpsum3}>CAR PARKING</Text>
       </View>
       <View style={styles.icon2Row}>
         <MaterialCommunityIcons
           name="hospital-building"
           style={styles.icon2}
         ></MaterialCommunityIcons>
-        <Text style={styles.dscchospital}>DSCC হাসপাতাল</Text>
+        <Text style={styles.dscchospital}>DSCC HOSPITAL</Text>
         <MaterialCommunityIcons
           name="home-minus"
           style={styles.icon7}
         ></MaterialCommunityIcons>
-        <Text style={styles.community}>কমিউনিটি সেন্টার</Text>
+        <Text style={styles.community}>COMMUNITY HOSPITAL</Text>
       </View>
       <View style={styles.icon3Row}>
         <MaterialCommunityIcons
           name="highway"
           style={styles.icon3}
         ></MaterialCommunityIcons>
-        <Text style={styles.loremIpsum2}>রাস্তা / নদমা{"\n"}/ ফুটপাত</Text>
+        <Text style={styles.loremIpsum2}>ROAD/DRAIN/FOOTPATH</Text>
         <MaterialCommunityIcons
           name="bus-side"
           style={styles.icon8}
         ></MaterialCommunityIcons>
-        <Text style={styles.bus}>বাস টার্মিনাল</Text>
+        <Text style={styles.bus}>BUS TERMINAL</Text>
       </View>
       <View style={styles.icon4Row}>
         <MaterialCommunityIcons
           name="home-modern"
           style={styles.icon4}
         ></MaterialCommunityIcons>
-        <Text style={styles.bazar}>বাজার</Text>
+        <Text style={styles.bazar}>BAZAR</Text>
         <MaterialCommunityIcons
           name="delete"
           style={styles.icon9}
         ></MaterialCommunityIcons>
-        <Text style={styles.publictoilet}>পাবলিক টয়লেট</Text>
+        <Text style={styles.publictoilet}>PUBLIC TOILET</Text>
       </View>
       <QueryButton style={styles.queryButton} navigation={navigation}></QueryButton>
       <View style={styles.icon10Row}>
@@ -82,13 +82,13 @@ function HomeScreen({navigation, props }) {
           style={styles.icon10}
         ></MaterialCommunityIcons>
         <Text style={styles.publictoilet1}>
-          স্কুল, কলেজ, {"\n"}বিশ্ববিদ্যালয় ও মাদ্রাসা
+          SCHOOL, COLLEGE, {"\n"} UNIVERSITY & MADRASHA
         </Text>
         <MaterialCommunityIcons
           name="map-marker-radius"
           style={styles.icon11}
         ></MaterialCommunityIcons>
-        <Text style={styles.park}>পার্ক</Text>
+        <Text style={styles.park}>PARK</Text>
       </View>
       
     </View>

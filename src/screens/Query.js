@@ -21,9 +21,9 @@ function Query({navigation, props }) {
         inlineImagePadding={1}
         style={styles.placeholder}
       ></TextInput>
-      <View style={styles.ছবিযোগকরুনStackRow}>
-        <View style={styles.ছবিযোগকরুনStack}>
-          <Text style={styles.ছবিযোগকরুন}>ছবি যোগ করুন</Text>
+      <View style={styles.picStackRow}>
+        <View style={styles.picStack}>
+          <Text style={styles.pic}>ADD PICTURE</Text>
           <Image
             source={require("../assets/images/placeholder-img-1.jpg")}
             resizeMode="contain"
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
     marginLeft: 38
   },
-  ছবিযোগকরুন: {
+  pic: {
     top: 0,
     left: 12,
     position: "absolute",
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     height: 120,
     position: "absolute"
   },
-  ছবিযোগকরুনStack: {
+  picStack: {
     width: 121,
     height: 228
   },
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     marginLeft: 59,
     marginTop: 10
   },
-  ছবিযোগকরুনStackRow: {
+  picStackRow: {
     height: 228,
     flexDirection: "row",
     marginTop: 13,

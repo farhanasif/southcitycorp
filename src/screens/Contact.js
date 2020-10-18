@@ -9,11 +9,11 @@ function Contact(props) {
         resizeMode="contain"
         style={styles.image}
       ></Image>
-      <Text style={styles.জরুরীযোগাযোগ}>জরুরী যোগাযোগ</Text>
+      <Text style={styles.emergency}>EMERGENCY CONTACT</Text>
       <Text style={styles.loremIpsum}>
-        ঢাকা দক্ষিণ সিটি কর্পোরেশন{"\n"}নগর ভবন, ঢাকা-১০০০{"\n"}টেলিফোন নম্বরঃ
-        ০২-৯৫৫৬০১৪{"\n"}ইমেইল: info@dscc.gov.bd{"\n"}ওয়েব সাইটঃ www.dscc.gov.bd
-        {"\n"}ফেইসবুক পেইজ www.facebook.com/officialpage.dscc/
+        DHAKA SOUTH CITY CORPORATION{"\n"}NAGAR BHABAN, DHAKA-১০০০{"\n"}PHONE NO:
+        02-9556014{"\n"}EMAIL: info@dscc.gov.bd{"\n"}WEB: www.dscc.gov.bd
+        {"\n"}FACEBOOK: www.facebook.com/officialpage.dscc/
       </Text>
     </View>
   );
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     marginTop: 11,
     alignSelf: "center"
   },
-  জরুরীযোগাযোগ: {
+  emergency: {
     color: "rgba(96,149,19,1)",
     fontSize: 16,
     marginTop: 31,

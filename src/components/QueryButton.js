@@ -6,7 +6,7 @@ function QueryButton( props ) {
   return (
     <View style={[styles.container, props.style]}>
       <TouchableOpacity style={styles.button} onPress={() => props.navigation.navigate('QueryHome')}>
-        <Text style={styles.loremIpsum5}>আপনার অভিযোগটি আমাদের জানান</Text>
+        <Text style={styles.loremIpsum5}>HAVE QUERY ? SUBMIT QUERY HERE</Text>
       </TouchableOpacity>
     </View>
   );

@@ -20,7 +20,7 @@ const Signin = ({ navigation }) => {
             <Entypo style={styles.searchIcon} name="mail" size={24} color="#000"/>
             <TextInput
                 style={styles.input}
-                placeholder="ইমেইল"
+                placeholder="EMAIL"
                 underlineColorAndroid="#0F8943"
             />
         </View>
@@ -29,7 +29,7 @@ const Signin = ({ navigation }) => {
             <TextInput
                 style={styles.input}
                 secureTextEntry={true}
-                placeholder="পাসওয়ার্ড"
+                placeholder="PASSWORD"
                 underlineColorAndroid="#0F8943"
             />
         </View>
@@ -45,7 +45,7 @@ const Signin = ({ navigation }) => {
           placeholder='Password'
         /> */}
         <Button
-          title="সাইন ইন (Sign In)"
+          title="SIGN IN"
           icon={
             <FontAwesome
               name="sign-in"
@@ -58,7 +58,7 @@ const Signin = ({ navigation }) => {
           onPress={() => navigation.navigate('Root')}
         />
         <Button
-          title="জিমেইল এর সাহায্যে সাইন ইন"
+          title="SIGN IN WITH GMAIL"
           icon={
             <MaterialCommunityIcons
               name="gmail"
@@ -69,26 +69,14 @@ const Signin = ({ navigation }) => {
           }
           buttonStyle={{marginTop: 10, backgroundColor:'#DC4A3D'}}
         />
-        {/* <Button
-          title="Sign In with Facebook"
-          icon={
-            <FontAwesome
-              name="facebook"
-              size={15}
-              color="white"
-              style={{marginRight: 10}}
-            />
-          }
-          buttonStyle={{marginTop: 10, backgroundColor:'#4267B2'}}
-        /> */}
         <Button
-          title="নতুন একাউন্ট করুন"
+          title="Create a new account"
           type="clear"
           titleStyle={{ color: '#0F8943'}}
           onPress={() => navigation.navigate('SignUp')}
         />
         <Button
-          title="পাসওয়ার্ড ভুলে গেছেন"
+          title="Forgot Password"
           type="clear"
           titleStyle={{ color: '#0F8943'}}
           onPress={() => navigation.navigate('ForgotPassword')}

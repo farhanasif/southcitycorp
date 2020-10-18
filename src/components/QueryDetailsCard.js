@@ -5,11 +5,11 @@ function QueryDetailsCard(props) {
   return (
     <View style={[styles.container, props.style]}>
       <View style={styles.rect}>
-        <Text style={styles.বিস্তারিত}>বিস্তারিত:</Text>
+        <Text style={styles.details}>Details:</Text>
         <Text style={styles.loremIpsum}>
           In my area, dustbins are not cleaned regularly.....
         </Text>
-        <Text style={styles.ছবি}>ছবি:</Text>
+        <Text style={styles.ছবি}>Pic:</Text>
         <View style={styles.image2Row}>
           <Image
             source={require("../assets/images/download.jpg")}
@@ -34,20 +34,20 @@ function QueryDetailsCard(props) {
             style={styles.image5}
           ></Image>
         </View>
-        <View style={styles.লোকেশনStack}>
-          <Text style={styles.লোকেশন}>লোকেশন:</Text>
+        <View style={styles.locationStack}>
+          <Text style={styles.location}>Location:</Text>
           <Text style={styles.loremIpsum3}>West Malibag, Road 22</Text>
         </View>
-        <View style={styles.সাবমিশনেরতারিখRow}>
-          <Text style={styles.সাবমিশনেরতারিখ}>সাবমিশনের তারিখ:</Text>
-          <Text style={styles.বর্তমানঅবস্থা}>বর্তমান অবস্থা:</Text>
+        <View style={styles.submissionRow}>
+          <Text style={styles.submission}>Submission date:</Text>
+          <Text style={styles.current}>Status:</Text>
         </View>
         <View style={styles.loremIpsum4Row}>
           <Text style={styles.loremIpsum4}>23rd September, 2020</Text>
           <Text style={styles.submitted2}>Submitted</Text>
         </View>
-        <Text style={styles.problemType}>সমস্যার ধরণ:</Text>
-        <Text style={styles.loremIpsum5}>রাস্তায় ময়লা আবর্জনা ও দুর্গন্ধ</Text>
+        <Text style={styles.problemType}>Query Type:</Text>
+        <Text style={styles.loremIpsum5}>Road is dirty</Text>
       </View>
     </View>
   );
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 0
   },
-  বিস্তারিত: {
+  details: {
     fontWeight: '700',
     color: "rgba(96,149,19,1)",
     marginTop: 10,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     marginTop: 6,
     marginLeft: 14
   },
-  ছবি: {
+  pic: {
     fontWeight: '700',
     color: "rgba(96,149,19,1)",
     marginTop: 8,
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     marginLeft: 14,
     marginRight: 94
   },
-  লোকেশন: {
+  location: {
     top: 0,
     left: 0,
     position: "absolute",
@@ -144,22 +144,22 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: "#121212"
   },
-  লোকেশনStack: {
+  locationStack: {
     width: 143,
     height: 37,
     marginTop: 18,
     marginLeft: 13
   },
-  সাবমিশনেরতারিখ: {
+  submission: {
     fontWeight: '700',
     color: "rgba(96,149,19,1)"
   },
-  বর্তমানঅবস্থা: {
+  current: {
     fontWeight: '700',
     color: "rgba(96,149,19,1)",
     marginLeft: 81
   },
-  সাবমিশনেরতারিখRow: {
+  submissionRow: {
     height: 19,
     flexDirection: "row",
     marginTop: 17,

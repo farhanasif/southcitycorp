@@ -61,10 +61,10 @@ function Root() {
         
       }}
     >
-      <Tab.Screen name="Home" component={Home}  options={{tabBarLabel: 'হোম'}}/>
-      <Tab.Screen name="Query" component={QueryDetailsScreen} options={{tabBarLabel: 'অভিযোগ'}}/>
-      <Tab.Screen name="Profile" component={Account} options={{tabBarLabel: 'একাউন্ট'}}/>
-      <Tab.Screen name="Inbox" component={Contact} options={{tabBarLabel: 'হেল্প'}}/>
+      <Tab.Screen name="Home" component={Home}  options={{tabBarLabel: 'HOME'}}/>
+      <Tab.Screen name="Query" component={QueryDetailsScreen} options={{tabBarLabel: 'QUERY'}}/>
+      <Tab.Screen name="Profile" component={Account} options={{tabBarLabel: 'ACCOUNT'}}/>
+      <Tab.Screen name="Inbox" component={Contact} options={{tabBarLabel: 'HELP'}}/>
     </Tab.Navigator>
   )
 }

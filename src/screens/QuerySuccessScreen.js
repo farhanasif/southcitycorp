@@ -9,13 +9,13 @@ function QuerySuccessScreen({navigation, props}) {
         <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('HomeRoot')}>
           <View style={styles.icon3Row}>
             <Feather name="arrow-left" style={styles.icon3}></Feather>
-            <Text style={styles.হোমএযান}>হোম এ যান</Text>
+            <Text style={styles.gohome}>GO TO HOME</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Query')}>
           <View style={styles.icon2Row}>
             <Feather name="arrow-right" style={styles.icon2}></Feather>
-            <Text style={styles.বিস্তারিতদেখুন}>বিস্তারিত দেখুন</Text>
+            <Text style={styles.details}>VIEW DETAILS</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -31,7 +31,7 @@ function QuerySuccessScreen({navigation, props}) {
         ></MaterialCommunityIcons>
       </View>
       <Text style={styles.loremIpsum}>
-        আপনার অভিযোগটি সফলভাবে {"\n"}সাবমিট হয়েছে !!!
+        YOUR QUERY HAS BEEN {"\n"}SUBMITTED SUCCESSFULLY !!!
       </Text>
     </View>
   );
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     height: 25,
     width: 24
   },
-  হোমএযান: {
+  gohome: {
     
     color: "rgba(96,149,19,1)",
     marginLeft: 20,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     height: 25,
     width: 24
   },
-  বিস্তারিতদেখুন: {
+  details: {
     
     color: "rgba(96,149,19,1)",
     marginLeft: 20,

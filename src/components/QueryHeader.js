@@ -5,7 +5,7 @@ function QueryHeader(props) {
   return (
     <View style={[styles.container, props.style]}>
       <View style={styles.rect}>
-        <Text style={styles.loremIpsum}>আপনার অভিযোগের বিস্তারিত</Text>
+        <Text style={styles.loremIpsum}>WRITE YOUR QUERY DETAILS</Text>
       </View>
     </View>
   );

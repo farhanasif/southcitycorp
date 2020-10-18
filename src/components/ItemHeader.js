@@ -5,7 +5,7 @@ function ItemHeader(props) {
   return (
     <View style={[styles.container, props.style]}>
       <View style={styles.rect}>
-        <Text style={styles.services}>সেবা সমূহ</Text>
+        <Text style={styles.services}>SERVICES</Text>
       </View>
     </View>
   );

@@ -6,7 +6,7 @@ function QuerySubmitBtn(props) {
   return (
     <View style={[styles.container, props.style]}>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.সাবমিটকরুন} onPress={() => props.navigation.navigate('OTP')}>সাবমিট করুন</Text>
+        <Text style={styles.SUBMIT} onPress={() => props.navigation.navigate('OTP')}>SUBMIT HERE</Text>
       </TouchableOpacity>
     </View>
   );
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(96,149,19,1)",
     borderRadius: 20
   },
-  সাবমিটকরুন: {
+  SUBMIT: {
     color: "rgba(255,253,253,1)",
     marginTop: 11,
     marginLeft: 103

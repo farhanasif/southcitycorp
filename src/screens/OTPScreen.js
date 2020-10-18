@@ -16,13 +16,13 @@ function OtpScreen({ navigation, props }) {
         resizeMode="contain"
         style={styles.image}
       ></Image>
-      <Text style={styles.loremIpsum}>আপনার মোবাইল এ পাঠানো ওটিপি লিখুন</Text>
+      <Text style={styles.loremIpsum}>Write down the OTP send to your mobile</Text>
       <TextInput
         placeholder=" 4 Digit OTP..."
         style={styles.placeholder}
       ></TextInput>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.অভিযোগটিসাবমিটকরুন} onPress={() => navigation.navigate('Success')}>অভিযোগটি সাবমিট করুন</Text>
+        <Text style={styles.submit} onPress={() => navigation.navigate('Success')}>SUBMIT YOUR QUERY</Text>
       </TouchableOpacity>
     </View>
   );
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     alignSelf: "center"
   },
-  অভিযোগটিসাবমিটকরুন: {
+  submit: {
     
     color: "rgba(255,255,255,1)",
     marginTop: 13,

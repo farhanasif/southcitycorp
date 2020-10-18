@@ -20,7 +20,7 @@ const SignUp = ({ navigation }) => {
             <Entypo style={styles.searchIcon} name="user" size={24} color="#000"/>
             <TextInput
                 style={styles.input}
-                placeholder="আপনার নাম"
+                placeholder="Your Name"
                 underlineColorAndroid="#0F8943"
             />
         </View>
@@ -28,7 +28,7 @@ const SignUp = ({ navigation }) => {
             <Entypo style={styles.searchIcon} name="mail" size={24} color="#000"/>
             <TextInput
                 style={styles.input}
-                placeholder="ইমেইল"
+                placeholder="Email"
                 underlineColorAndroid="#0F8943"
             />
         </View>
@@ -36,7 +36,7 @@ const SignUp = ({ navigation }) => {
             <Entypo style={styles.searchIcon} name="keyboard" size={24} color="#000"/>
             <TextInput
                 style={styles.input}
-                placeholder="পাসওয়ার্ড"
+                placeholder="Password"
                 underlineColorAndroid="#0F8943"
             />
         </View>
@@ -44,7 +44,7 @@ const SignUp = ({ navigation }) => {
             <Entypo style={styles.searchIcon} name="keyboard" size={24} color="#000"/>
             <TextInput
                 style={styles.input}
-                placeholder="পাসওয়ার্ড কন্ফার্ম করুন"
+                placeholder="Confirm password"
                 underlineColorAndroid="#0F8943"
             />
         </View>
@@ -52,7 +52,7 @@ const SignUp = ({ navigation }) => {
             <Entypo style={styles.searchIcon} name="mobile" size={24} color="#000"/>
             <TextInput
                 style={styles.input}
-                placeholder="মোবাইল"
+                placeholder="Mobile"
                 underlineColorAndroid="#0F8943"
             />
         </View>
@@ -68,7 +68,7 @@ const SignUp = ({ navigation }) => {
           placeholder='Password'
         /> */}
         <Button
-          title="একাউন্ট করুন"
+          title="CREATE ACCOUNT"
           icon={
             <FontAwesome
               name="check"
@@ -81,7 +81,7 @@ const SignUp = ({ navigation }) => {
           
         />
         <Button
-          title="জিমেইল একাউন্ট ব্যবহার করুন"
+          title="USE GMAIL ACCOUNT"
           icon={
             <MaterialCommunityIcons
               name="gmail"
@@ -105,7 +105,7 @@ const SignUp = ({ navigation }) => {
           buttonStyle={{marginTop: 10, backgroundColor:'#4267B2'}}
         /> */}
         <Button
-          title="লগইন করুন"
+          title="LOGIN"
           type="clear"
           titleStyle={{ color: '#0F8943'}}
           onPress={() => navigation.navigate('Signin')}
