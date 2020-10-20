@@ -14,7 +14,7 @@ const Account = ({ navigation }) => {
             style={styles.image}
             ></Image>
         </View>
-        <View style={{ alignItems: 'center', paddingBottom: 20}}> 
+        <View style={{ alignItems: 'flex-start', paddingBottom: 20, paddingLeft: 20}}> 
             <Image
             source={require("../assets/images/avater.png")}
             resizeMode="contain"
