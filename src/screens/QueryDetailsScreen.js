@@ -1,54 +1,68 @@
-import React, { Component } from "react";
-import { StyleSheet, View, Image } from "react-native";
-import QueryHeader from "../components/QueryHeader";
-import QueryDetailsCard from "../components/QueryDetailsCard";
+import React from 'react';
+import { StyleSheet, Text, SafeAreaView, ScrollView, View, Image, TouchableOpacity } from 'react-native';
+import CardView from '../components/CardView';
+const COLOR = "#85929e";
 
-function QueryDetailsScreen(props) {
+const QueryDetailsScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.imageStack}>
-        <Image
-          source={require("../assets/images/DSCC-logo-final.png")}
-          resizeMode="contain"
-          style={styles.image}
-        ></Image>
-        <QueryHeader style={styles.queryHeader}></QueryHeader>
-      </View>
-      <QueryDetailsCard style={styles.queryDetailsCard}></QueryDetailsCard>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollView}>
+        <View style={{ alignItems: 'center',}}> 
+            <Image
+            source={require("../assets/images/DSCC-logo-final.png")}
+            resizeMode="contain"
+            style={styles.image}
+            ></Image>
+        </View>
+        <View style={{alignItems: 'center', paddingBottom: 10}}> 
+            <Text style={{fontWeight: '700', fontSize: 18, color:'rgba(96,149,19,1)'}}>
+                Your Query Details
+            </Text>
+        </View>
+        <CardView />
+        <CardView />
+        <CardView />
+        <CardView />
+        <CardView />
+
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    marginTop: 10
+  },
+  scrollView: {
+    marginHorizontal: 10,
   },
   image: {
-    top: 0,
-    width: 200,
-    height: 200,
-    position: "absolute",
-    left: 37
+    width: 140,
+    height: 140,
   },
-  queryHeader: {
-    position: "absolute",
-    top: 168,
-    width: 273,
-    height: 40,
-    left: 0
+  button: {
+    alignItems: "center",
+    backgroundColor: COLOR,
+    padding: 12,
+    marginBottom: 10,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 5,
+    shadowOpacity: 1,
+    shadowRadius: 0,
+    borderRadius: 12
   },
-  imageStack: {
-    width: 273,
-    height: 208,
-    marginLeft: 51
-  },
-  queryDetailsCard: {
-    height: 394,
-    width: 340,
-    borderRadius: 17,
-    marginTop: 26,
-    marginLeft: 18
-  }
+  buttonText: {
+      color: 'white', 
+      fontWeight: '500', 
+      fontSize: 13
+}
+
 });
 
 export default QueryDetailsScreen;
