@@ -11,10 +11,13 @@ import SignUp from './src/screens/SignUp';
 import ForgotPassword from './src/screens/ForgotPassword';
 import Query from './src/screens/Query';
 import QueryDetailsScreen from './src/screens/QueryDetailsScreen';
+import QueryDetailsScreen2 from './src/screens/QueryDetailsScreen2';
+import QueryUpdate from './src/screens/QueryUpdate';
 import OTPScreen from './src/screens/OTPScreen';
 import QuerySuccessScreen from './src/screens/QuerySuccessScreen';
 import Account from './src/screens/Account';
 import Contact from './src/screens/Contact';
+import Dashboard from './src/screens/Dashboard';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -72,7 +75,9 @@ function Root() {
 function Home({navigation}){
   return (
     <Stack.Navigator initialRouteName="HomeRoot">
-        <Stack.Screen name="HomeRoot" component={HomeScreen} options={{headerShown: false,}} />
+        <Stack.Screen name="HomeRoot" component={Dashboard} options={{headerShown: false,}} />
+        <Stack.Screen name="QueryDetailsHome" component={QueryDetailsScreen2} options={{ title: 'Query Type' }}/>
+        <Stack.Screen name="QueryUpdate" component={QueryUpdate} options={{ title: 'Query Details' }}/>
         <Stack.Screen name="QueryHome" component={Query} options={{headerShown: false,}}/>  
         <Stack.Screen name="OTP" component={OTPScreen} options={{headerShown: false,}}/>
         <Stack.Screen name="Success" component={QuerySuccessScreen} options={{headerShown: false,}}/>
@@ -84,6 +89,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Signin" screenOptions={{headerShown: false,}}>
+        
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Splash" component={Splash} />

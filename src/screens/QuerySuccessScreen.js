@@ -1,135 +1,110 @@
-import React, { Component } from "react";
-import { StyleSheet, View, TouchableOpacity, Text, Image } from "react-native";
-import { Feather, MaterialCommunityIcons } from "react-native-vector-icons";
+import React from 'react';
+import { StyleSheet, Text, SafeAreaView, ScrollView, View, Image, TouchableOpacity, TextInput } from 'react-native';
+import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 
-function QuerySuccessScreen({navigation, props}) {
-  return (
-    <View style={styles.container}>
-      <View style={styles.button1Stack}>
-        <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('HomeRoot')}>
-          <View style={styles.icon3Row}>
-            <Feather name="arrow-left" style={styles.icon3}></Feather>
-            <Text style={styles.gohome}>GO TO HOME</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Query')}>
-          <View style={styles.icon2Row}>
-            <Feather name="arrow-right" style={styles.icon2}></Feather>
-            <Text style={styles.details}>VIEW DETAILS</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.imageStack}>
-        <Image
-          source={require("../assets/images/DSCC-logo-final.png")}
-          resizeMode="contain"
-          style={styles.image}
-        ></Image>
-        <MaterialCommunityIcons
-          name="check"
-          style={styles.icon}
-        ></MaterialCommunityIcons>
-      </View>
-      <Text style={styles.loremIpsum}>
-        YOUR QUERY HAS BEEN {"\n"}SUBMITTED SUCCESSFULLY !!!
-      </Text>
-    </View>
-  );
+
+const COLOR = "#609513";
+
+
+const QuerySuccessScreen = ({ route, navigation }) => {
+
+    const [value, onChangeText] = React.useState('OTP...');
+    return (
+        <SafeAreaView style={styles.container}>
+        <ScrollView style={styles.scrollView}>
+            <View style={{ alignItems: 'center',}}> 
+                <Image
+                source={require("../assets/images/DSCC-logo-final.png")}
+                resizeMode="contain"
+                style={styles.image}
+                ></Image>
+            </View>
+            <View style={{ alignItems: 'center',}}> 
+              <MaterialCommunityIcons
+                name="check"
+                style={styles.icon}
+              ></MaterialCommunityIcons>
+            </View>
+            
+            <View style={{alignItems: 'center', paddingBottom: 15}}> 
+                <Text style={{fontWeight: '500', fontSize: 15, color:'rgba(96,149,19,1)'}}>
+                    Your query submitted successfully.
+                </Text>
+            </View>
+
+            <View style={{alignItems: 'center'}}> 
+              <TouchableOpacity
+                  style={styles.button}
+                  onPress={() => navigation.navigate('Query')}
+              >
+                  <Feather
+                    name="arrow-left"
+                    style={styles.icon2}
+                  ></Feather>
+                  <Text style={styles.buttonText}>View Details</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                  style={styles.button}
+                  onPress={() => navigation.navigate('HomeRoot')}
+              >
+                  <Feather
+                    name="arrow-right"
+                    style={styles.icon2}
+                  ></Feather>
+                  <Text style={styles.buttonText}>Back home</Text>
+              </TouchableOpacity>
+            </View>
+        </ScrollView>
+        </SafeAreaView>
+    );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  },
-  button1: {
-    top: 59,
-    width: 200,
-    height: 60,
-    position: "absolute",
-    left: 0,
-    flexDirection: "row"
-  },
-  icon3: {
-    color: "rgba(96,149,19,1)",
-    fontSize: 24,
-    height: 25,
-    width: 24
-  },
-  gohome: {
-    
-    color: "rgba(96,149,19,1)",
-    marginLeft: 20,
-    marginTop: 3
-  },
-  icon3Row: {
-    height: 25,
-    flexDirection: "row",
     flex: 1,
-    marginRight: 59,
-    marginLeft: 28,
-    marginTop: 18
+    marginTop: 30
   },
-  button: {
-    top: 0,
-    width: 200,
-    height: 60,
-    position: "absolute",
-    left: 0,
-    flexDirection: "row"
-  },
-  icon2: {
-    color: "rgba(96,149,19,1)",
-    fontSize: 24,
-    height: 25,
-    width: 24
-  },
-  details: {
-    
-    color: "rgba(96,149,19,1)",
-    marginLeft: 20,
-    marginTop: 3
-  },
-  icon2Row: {
-    height: 25,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 40,
-    marginLeft: 28,
-    marginTop: 18
-  },
-  button1Stack: {
-    width: 200,
-    height: 119,
-    marginTop: 430,
-    marginLeft: 88
+  scrollView: {
+    marginHorizontal: 10,
   },
   image: {
-    top: 0,
-    width: 200,
-    height: 200,
-    position: "absolute",
-    left: 0
+    width: 140,
+    height: 140,
+  },
+  button: {
+    alignItems: "center",
+    backgroundColor: COLOR,
+    paddingVertical: 12,
+    marginBottom: 10,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 5,
+    shadowOpacity: 1,
+    shadowRadius: 0,
+    borderRadius: 12,
+    width: 300,
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+  buttonText: {
+      color: 'white', 
+      fontWeight: '500', 
+      fontSize: 13
   },
   icon: {
-    top: 188,
-    position: "absolute",
     color: "rgba(96,149,19,1)",
     fontSize: 140,
-    left: 30
   },
-  imageStack: {
-    width: 200,
-    height: 340,
-    marginTop: -549,
-    marginLeft: 88
+  icon2: {
+    color: "white",
+    fontSize: 20,
+    paddingRight: 4
   },
-  loremIpsum: {
-    
-    color: "rgba(96,149,19,1)",
-    textAlign: "center",
-    fontSize: 16,
-    alignSelf: "center"
-  }
+
 });
 
 export default QuerySuccessScreen;

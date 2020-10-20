@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView, ScrollView, View, Image, TouchableOpacity, TextInput } from 'react-native';
+import ServiceList from '../components/ServiceList';
+import ImageList from '../components/ImageList';
 const COLOR = "#609513";
 
 const UselessTextInput = (props) => {
@@ -13,9 +15,9 @@ const UselessTextInput = (props) => {
     );
   }
 
-const OtpScreen = ({ route, navigation }) => {
-
-    const [value, onChangeText] = React.useState('OTP...');
+const QueryUpdate = ({ route, navigation }) => {
+    const { otherParam} = route.params;
+    const [value, onChangeText] = React.useState('Write your details here...');
     return (
         <SafeAreaView style={styles.container}>
         <ScrollView style={styles.scrollView}>
@@ -27,26 +29,40 @@ const OtpScreen = ({ route, navigation }) => {
                 ></Image>
             </View>
             <View style={{alignItems: 'center', paddingBottom: 15}}> 
-                <Text style={{fontWeight: '400', fontSize: 13, color:'rgba(96,149,19,1)'}}>
-                    Write down the 4 digit OTP send to your mobile
+                <Text style={{fontWeight: '700', fontSize: 18, color:'rgba(96,149,19,1)'}}>
+                    {JSON.stringify(otherParam)}
                 </Text>
             </View>
-            <View style={{alignItems: 'center', paddingBottom: 15}}> 
-            <TextInput
-              style={{ height: 40, borderColor: 'rgba(96,149,19,1)', borderWidth: 3, width: 80, borderRadius: 7, fontWeight: '700', fontSize: 15, paddingHorizontal: 5}}
+            
+            <View
+            style={{
+                backgroundColor: value,
+                borderColor: '#566573',
+                borderWidth: 1,
+                borderRadius: 7
+            }}>
+            <UselessTextInput
+                multiline
+                numberOfLines={4}
                 onChangeText={text => onChangeText(text)}
-              value={value}
+                value={value}
             />
             </View>
-            
+            <View style={{alignItems: 'center', paddingBottom: 15, paddingTop: 5}}> 
+                <Text style={{fontWeight: '500', fontSize: 17, color:'rgba(96,149,19,1)'}}>
+                    Add Image
+                </Text>
+            </View>
+            <ImageList />
+            <ImageList />
             
             <View style={{alignItems: 'center'}}> 
-              <TouchableOpacity
-                  style={styles.button}
-                  onPress={() => navigation.navigate('Success')}
-              >
-                  <Text style={styles.buttonText}>Submit</Text>
-              </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => navigation.navigate('OTP')}
+                >
+                    <Text style={styles.buttonText}>Next</Text>
+                </TouchableOpacity>
             </View>
         </ScrollView>
         </SafeAreaView>
@@ -56,7 +72,7 @@ const OtpScreen = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 30
+    marginTop: 10
   },
   scrollView: {
     marginHorizontal: 10,
@@ -68,7 +84,7 @@ const styles = StyleSheet.create({
   button: {
     alignItems: "center",
     backgroundColor: COLOR,
-    paddingVertical: 12,
+    padding: 12,
     marginBottom: 10,
     shadowColor: "rgba(0,0,0,1)",
     shadowOffset: {
@@ -89,4 +105,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default OtpScreen;
+export default QueryUpdate;
